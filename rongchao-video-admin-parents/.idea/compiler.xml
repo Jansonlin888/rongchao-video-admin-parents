@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="rongchao-video-admin-api" />
+        <module name="rongchao-video-admin-common" />
+        <module name="rongchao-video-admin-mapper" />
+        <module name="rongchao-video-admin-pojo" />
+        <module name="rongchao-video-admin-service" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

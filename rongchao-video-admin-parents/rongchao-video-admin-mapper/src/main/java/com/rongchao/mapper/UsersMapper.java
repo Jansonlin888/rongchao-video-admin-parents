@@ -7,8 +7,6 @@ import org.apache.ibatis.annotations.Param;
 
 public interface UsersMapper {
 
-    Users selectByLogin(Users login);
-
     int countByExample(UsersExample example);
 
     int deleteByExample(UsersExample example);

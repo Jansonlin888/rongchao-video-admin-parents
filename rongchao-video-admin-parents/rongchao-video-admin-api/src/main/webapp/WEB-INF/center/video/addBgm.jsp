@@ -63,7 +63,7 @@
 		                            	<div id="input-error">
 	                            			<input type="hidden" id="path" name="path" class="form-control"/>
 
-											<input id="file" type="file" name="file" data-url="<%=request.getContextPath() %>/video/bgmUpload.action" accept=".mp3"/>
+											<input id="file" type="file" name="file" data-url="<%=request.getContextPath() %>/video/bgmUpload.action" accept=".mp4"/>
 											
 											<div id="bgmContent"></div>
 	                            		</div>

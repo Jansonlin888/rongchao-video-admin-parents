@@ -19,7 +19,7 @@ import org.springframework.web.multipart.MultipartFile;
 import com.rongchao.enums.VideoStatusEnum;
 import com.rongchao.pojo.Bgm;
 import com.rongchao.service.VideoService;
-import com.rongchao.utils.rongchaoJSONResult;
+import com.rongchao.utils.RongchaoJSONResult;
 import com.rongchao.utils.PagedResult;
 
 @Controller
@@ -29,8 +29,8 @@ public class VideoController {
 	@Autowired
 	private VideoService videoService;
 	
-/*	@Value("${FILE_SPACE}")
-	private String FILE_SPACE;*/
+	/*@Value("${FILE_SPACE}")*/
+	private String FILE_SPACE="/rongchao_videos_dev/mvc-bgm";
 	
 	@GetMapping("/showReportList")
 	public String showReportList() {
@@ -47,10 +47,10 @@ public class VideoController {
 	
 	@PostMapping("/forbidVideo")
 	@ResponseBody
-	public rongchaoJSONResult forbidVideo(String videoId) {
+	public RongchaoJSONResult forbidVideo(String videoId) {
 		
 		videoService.updateVideoStatus(videoId, VideoStatusEnum.FORBID.value);
-		return rongchaoJSONResult.ok();
+		return RongchaoJSONResult.ok();
 	}
 
 	@GetMapping("/showBgmList")
@@ -71,25 +71,25 @@ public class VideoController {
 	
 	@PostMapping("/addBgm")
 	@ResponseBody
-	public rongchaoJSONResult addBgm(Bgm bgm) {
+	public RongchaoJSONResult addBgm(Bgm bgm) {
 		
 		videoService.addBgm(bgm);
-		return rongchaoJSONResult.ok();
+		return RongchaoJSONResult.ok();
 	}
 	
 	@PostMapping("/delBgm")
 	@ResponseBody
-	public rongchaoJSONResult delBgm(String bgmId) {
+	public RongchaoJSONResult delBgm(String bgmId) {
 		videoService.deleteBgm(bgmId);
-		return rongchaoJSONResult.ok();
+		return RongchaoJSONResult.ok();
 	}
 	
 	@PostMapping("/bgmUpload")
 	@ResponseBody
-	public rongchaoJSONResult bgmUpload(@RequestParam("file") MultipartFile[] files) throws Exception {
+	public RongchaoJSONResult bgmUpload(@RequestParam("file") MultipartFile[] files) throws Exception {
 		
 		// 文件保存的命名空间
-//		String fileSpace = File.separator + "rongchao_videos_dev" + File.separator + "mvc-bgm";
+		String fileSpace = File.separator + "rongchao_videos_dev" + File.separator + "mvc-bgm";
 //		String fileSpace = "C:" + File.separator + "rongchao_videos_dev" + File.separator + "mvc-bgm";
 		
 		// 保存到数据库中的相对路径
@@ -103,11 +103,12 @@ public class VideoController {
 				String fileName = files[0].getOriginalFilename();
 				if (StringUtils.isNotBlank(fileName)) {
 					// 文件上传的最终保存路径
-					/*String finalPath = FILE_SPACE + uploadPathDB + File.separator + fileName;*/
+					String finalPath = FILE_SPACE + uploadPathDB + File.separator + fileName;
+					System.out.println(finalPath);
 					// 设置数据库保存的路径
 					uploadPathDB += (File.separator + fileName);
 					
-					/*File outFile = new File(finalPath);
+					File outFile = new File(finalPath);
 					if (outFile.getParentFile() != null || !outFile.getParentFile().isDirectory()) {
 						// 创建父文件夹
 						outFile.getParentFile().mkdirs();
@@ -115,15 +116,15 @@ public class VideoController {
 
 					fileOutputStream = new FileOutputStream(outFile);
 					inputStream = files[0].getInputStream();
-					IOUtils.copy(inputStream, fileOutputStream);*/
+					IOUtils.copy(inputStream, fileOutputStream);
 				}
 				
 			} else {
-				return rongchaoJSONResult.errorMsg("上传出错...");
+				return RongchaoJSONResult.errorMsg("上传出错...");
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-			return rongchaoJSONResult.errorMsg("上传出错...");
+			return RongchaoJSONResult.errorMsg("上传出错...");
 		} finally {
 			if (fileOutputStream != null) {
 				fileOutputStream.flush();
@@ -131,7 +132,12 @@ public class VideoController {
 			}
 		}
 		
-		return rongchaoJSONResult.ok(uploadPathDB);
+		return RongchaoJSONResult .ok(uploadPathDB);
 	}
-	
+
+	public RongchaoJSONResult uploadVideo() {
+
+		return RongchaoJSONResult.ok();
+	}
+
 }

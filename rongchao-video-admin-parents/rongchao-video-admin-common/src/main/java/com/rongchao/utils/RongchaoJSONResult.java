@@ -11,7 +11,7 @@ package com.rongchao.utils;
  * 				502：拦截器拦截到用户token出错
  * 				555：异常抛出信息
  */
-public class rongchaoJSONResult {
+public class RongchaoJSONResult {
 
     // 响应业务状态
     private Integer status;
@@ -24,45 +24,45 @@ public class rongchaoJSONResult {
     
     private String ok;	// 不使用
 
-    public static rongchaoJSONResult build(Integer status, String msg, Object data) {
-        return new rongchaoJSONResult(status, msg, data);
+    public static RongchaoJSONResult build(Integer status, String msg, Object data) {
+        return new RongchaoJSONResult(status, msg, data);
     }
 
-    public static rongchaoJSONResult ok(Object data) {
-        return new rongchaoJSONResult(data);
+    public static RongchaoJSONResult ok(Object data) {
+        return new RongchaoJSONResult(data);
     }
 
-    public static rongchaoJSONResult ok() {
-        return new rongchaoJSONResult(null);
+    public static RongchaoJSONResult ok() {
+        return new RongchaoJSONResult(null);
     }
     
-    public static rongchaoJSONResult errorMsg(String msg) {
-        return new rongchaoJSONResult(500, msg, null);
+    public static RongchaoJSONResult errorMsg(String msg) {
+        return new RongchaoJSONResult(500, msg, null);
     }
     
-    public static rongchaoJSONResult errorMap(Object data) {
-        return new rongchaoJSONResult(501, "error", data);
+    public static RongchaoJSONResult errorMap(Object data) {
+        return new RongchaoJSONResult(501, "error", data);
     }
     
-    public static rongchaoJSONResult errorTokenMsg(String msg) {
-        return new rongchaoJSONResult(502, msg, null);
+    public static RongchaoJSONResult errorTokenMsg(String msg) {
+        return new RongchaoJSONResult(502, msg, null);
     }
     
-    public static rongchaoJSONResult errorException(String msg) {
-        return new rongchaoJSONResult(555, msg, null);
+    public static RongchaoJSONResult errorException(String msg) {
+        return new RongchaoJSONResult(555, msg, null);
     }
 
-    public rongchaoJSONResult() {
+    public RongchaoJSONResult() {
 
     }
 
-    public rongchaoJSONResult(Integer status, String msg, Object data) {
+    public RongchaoJSONResult(Integer status, String msg, Object data) {
         this.status = status;
         this.msg = msg;
         this.data = data;
     }
 
-    public rongchaoJSONResult(Object data) {
+    public RongchaoJSONResult(Object data) {
         this.status = 200;
         this.msg = "OK";
         this.data = data;

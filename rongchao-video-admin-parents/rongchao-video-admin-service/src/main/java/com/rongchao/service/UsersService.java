@@ -7,5 +7,4 @@ public interface UsersService {
 
 	public PagedResult queryUsers(Users user, Integer page, Integer pageSize);
 
-	public Users userLogin(Users users);
 }

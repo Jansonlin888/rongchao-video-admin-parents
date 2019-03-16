@@ -5,7 +5,7 @@
 	<!-- BEGIN HEAD -->
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>荣超短视频后台管理系统</title>
+        <title></title>短视频后台管理系统</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         
@@ -50,7 +50,7 @@
 				    
 				    	<div class="page-content-body">
 				    	
-					        <jsp:include page="rongchao.jsp"></jsp:include>
+					        <jsp:include page="rangchao.jsp"></jsp:include>
 					        
 				        </div>
 				        

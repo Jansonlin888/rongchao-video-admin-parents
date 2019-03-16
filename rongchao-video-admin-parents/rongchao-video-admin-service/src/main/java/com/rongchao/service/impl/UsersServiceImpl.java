@@ -54,10 +54,4 @@ public class UsersServiceImpl implements UsersService {
 
 		return grid;
 	}
-
-	@Override
-	public Users userLogin(Users users) {
-		Users login = userMapper.selectByLogin(users);
-		return login;
-	}
 }

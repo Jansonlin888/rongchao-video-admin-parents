@@ -11,7 +11,7 @@
 <input type="hidden" id="hdnContextPath" name="hdnContextPath" value="<%=request.getContextPath() %>"/>
 <!-- <input type="hidden" id="apiServer" name="apiServer" value="http://192.168.1.2:8081"/>  -->
 <!-- <input type="hidden" id="bgmServer" name="bgmServer" value="http://192.168.1.2:8080/mvc"/> -->
-<input type="hidden" id="apiServer" name="apiServer" value="https://www.rongchaodsp.com/v"/>
+<input type="hidden" id="apiServer" name="apiServer" value="https://www.imoocdsp.com/v"/>
 <input type="hidden" id="bgmServer" name="bgmServer" value="http://118.24.157.179/mvc"/>
 
 

@@ -30,7 +30,7 @@ public class Users {
     }
 
     public void setUsername(String username) {
-        this.username = username == null ? null : username.trim();
+        this.username = username;
     }
 
     public String getPassword() {
@@ -38,6 +38,7 @@ public class Users {
     }
 
     public void setPassword(String password) {
+
         this.password = password == null ? null : password.trim();
     }
 

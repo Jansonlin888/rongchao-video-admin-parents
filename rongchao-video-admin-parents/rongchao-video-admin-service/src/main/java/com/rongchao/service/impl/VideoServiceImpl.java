@@ -21,9 +21,8 @@ import com.rongchao.pojo.vo.Reports;
 import com.rongchao.service.VideoService;
 import com.rongchao.utils.JsonUtils;
 import com.rongchao.utils.PagedResult;
-/*
 import com.rongchao.web.util.ZKCurator;
-*/
+
 
 @Service
 public class VideoServiceImpl implements VideoService {
@@ -37,9 +36,8 @@ public class VideoServiceImpl implements VideoService {
 	@Autowired
 	private Sid sid;
 	
-	/*@Autowired
 	private ZKCurator zkCurator;
-	*/
+
 	@Autowired
 	private UsersReportMapperCustom usersReportMapperCustom;
 	
@@ -99,9 +97,9 @@ public class VideoServiceImpl implements VideoService {
 		map.put("operType", BGMOperatorTypeEnum.ADD.type);
 		map.put("path", bgm.getPath());
 		
-/*
+
 		zkCurator.sendBgmOperator(bgmId, JsonUtils.objectToJson(map));
-*/
+
 	}
 	
 	@Override
@@ -114,9 +112,9 @@ public class VideoServiceImpl implements VideoService {
 		map.put("operType", BGMOperatorTypeEnum.DELETE.type);
 		map.put("path", bgm.getPath());
 		
-/*
+
 		zkCurator.sendBgmOperator(id, JsonUtils.objectToJson(map));
-*/
+
 
 	}
 

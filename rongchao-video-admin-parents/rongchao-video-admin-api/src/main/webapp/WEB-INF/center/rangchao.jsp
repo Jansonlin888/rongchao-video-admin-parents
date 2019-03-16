@@ -19,7 +19,7 @@
 	    </ul>
 	</div>
 	
-	<h1 class="page-title"> 荣超短视频后台管理系统 </h1>
+	<h1 class="page-title"> 短视频后台管理系统 </h1>
                         
 	<div class="clearfix"></div>
         
@@ -31,14 +31,14 @@
 	                <div class="caption">
 	                    <i class="icon-microphone font-dark hide"></i>
 	                    <span class="caption-subject bold font-dark uppercase"> 平台技术简介</span>
-	                    <span class="caption-helper">小程序后台接口  + 短视频后台管理</span>
+	                    <span class="caption-helper">后台接口  + 短视频后台管理</span>
 	                </div>
 	            </div>
 	            <div class="portlet-body">
 	                <div class="row">
 	                    <div class="col-md-12">
 	                        <div class="mt-widget-3" style="padding-top: 15px;">
-	                        	<p class="desc"><font style="font-size: 16px;"><b>小程序api - 技术选型：</b></font></p>
+	                        	<p class="desc"><font style="font-size: 16px;"><b>api - 技术选型：</b></font></p>
 	                        	<p class="desc">1、核心框架：Spring Framework 4.3.14.RELEASE</p>
 	                        	<p class="desc">2、SpringBoot：1.5.10.RELEASE</p>
 								<p class="desc">3、持久层框架：MyBatis 3.4.5 + pagehelper 5.1.2</p>
@@ -86,7 +86,7 @@
 	            <div class="portlet-title">
 	                <div class="caption">
 	                    <i class="icon-microphone font-dark hide"></i>
-	                    <span class="caption-subject bold font-dark uppercase"> 慕课网</span>
+	                    <span class="caption-subject bold font-dark uppercase"> 123</span>
 	                    <span class="caption-helper">视频推荐</span>
 	                </div>
 	            </div>
@@ -96,7 +96,7 @@
 	                        <img src="<%=request.getContextPath() %>/static/pages/img/course/springboot.jpg" width="233px" class="img-responsive"/>
 	                    </div>
 	                    <div class="col-md-8 " >
-	                    	<h4><a href="https://www.rongchao.com/comment/956" target="_blank">《SpringBoot开发常用技术整合》</a></h4>
+	                    	<h4><a href="https://www.imooc.com/comment/956" target="_blank">《SpringBoot开发常用技术整合》</a></h4>
 	                    </div>
 	                </div>
 	                <div class="row " style="margin-top: 10px;">
@@ -104,7 +104,7 @@
 	                        <img src="<%=request.getContextPath() %>/static/pages/img/course/zookeeper.jpg" width="233px" class="img-responsive"/>
 	                    </div>
 	                    <div class="col-md-8 " >
-	                    	<h4><a href="https://coding.rongchao.com/class/201.html" target="_blank">《ZooKeeper分布式专题与Dubbo微服务入门》</a></h4>
+	                    	<h4><a href="https://coding.imooc.com/class/201.html" target="_blank">《ZooKeeper分布式专题与Dubbo微服务入门》</a></h4>
 	                    </div>
 	                </div>
 	            </div>

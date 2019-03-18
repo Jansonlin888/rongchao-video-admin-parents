@@ -62,6 +62,12 @@
                                 <span class="title">添加bgm</span>
                             </a>
                         </li>
+
+                        <li class="nav-item ">
+                            <a href="<%=request.getContextPath() %>/video/showUpload.action" class="ajaxify nav-link ">
+                                <span class="title">测试上传</span>
+                            </a>
+                        </li>
                     </ul>
                	</li>
                	

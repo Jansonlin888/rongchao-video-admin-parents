@@ -98,7 +98,7 @@ public class VideoServiceImpl implements VideoService {
 		map.put("path", bgm.getPath());
 		
 
-		zkCurator.sendBgmOperator(bgmId, JsonUtils.objectToJson(map));
+		//zkCurator.sendBgmOperator(bgmId, JsonUtils.objectToJson(map));
 
 	}
 	
@@ -113,7 +113,7 @@ public class VideoServiceImpl implements VideoService {
 		map.put("path", bgm.getPath());
 		
 
-		zkCurator.sendBgmOperator(id, JsonUtils.objectToJson(map));
+		//zkCurator.sendBgmOperator(id, JsonUtils.objectToJson(map));
 
 
 	}

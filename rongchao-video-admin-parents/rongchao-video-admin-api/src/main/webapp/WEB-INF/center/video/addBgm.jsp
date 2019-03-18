@@ -61,9 +61,9 @@
 		                        	<label class="col-md-3 control-label"><span class="field-required"> * </span>音乐片段</label>
 		                            <div class="col-md-4">
 		                            	<div id="input-error">
-	                            			<input type="hidden" id="path" name="path" class="form-control"/>
+	                            			<%--<input type="hidden" id="path" name="path" class="form-control"/>--%>
 
-											<input id="file" type="file" name="file" data-url="<%=request.getContextPath() %>/video/bgmUpload.action" accept=".mp4"/>
+											<input id="file" type="file" name="file" data-url="<%=request.getContextPath() %>/video/bgmUpload.action" accept=".mp3"/>
 											
 											<div id="bgmContent"></div>
 	                            		</div>
@@ -99,7 +99,7 @@
     	done: function(e, data) {
     		console.log(data);
     		
-    		if (data.result.status != '200') {
+    		if (data.result.status == '200') {
     			alert("长传失败...");
     		} else {
     			var bgmServer = $("#bgmServer").val();
@@ -141,10 +141,10 @@
             name: {
                 required: true,
                 rangelength: [1,50]
-            },
+            }/*,
             path: {
                 required: true
-            }
+            }*/
         },
         messages: {
         	author: {
@@ -154,10 +154,10 @@
             name: {
                 required: "歌曲不能为空.",
                 rangelength: "歌曲长度请控制在1-50位."
-            },
+            }/*,
             path: {
                 required: "路径不能为空."
-            }
+            }*/
         },
         invalidHandler: function(event, validator) { //display error alert on form submit   
             $('.alert-danger', $('#addBgmForm')).show();
